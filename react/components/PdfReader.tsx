@@ -7,12 +7,19 @@ type Props = {
   height: number,
 };
 
+/**
+ * Este componente sirve para visualizar un archivo pdf
+ * @param pdfUrl dirreción en donde se encuentra el archivo pdf que queremos visualizar
+ * @param width ancho
+ * @param height alto
+ * @returns documento pdf
+ */
+
+/** */
 const PdfReader = ({ pdfUrl, width, height }: Props) => {
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  });
+  useEffect(() => setMounted(true));
 
   return mounted &&
   <div className={`flex justify-center flex-col items-center ${styles.pdf__reader}`}>
